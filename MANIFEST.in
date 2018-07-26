@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hamdan *.css
+recursive-include hamdan *.csv
+recursive-include hamdan *.html
+recursive-include hamdan *.ico
+recursive-include hamdan *.js
+recursive-include hamdan *.json
+recursive-include hamdan *.md
+recursive-include hamdan *.png
+recursive-include hamdan *.py
+recursive-include hamdan *.svg
+recursive-include hamdan *.txt
+recursive-exclude hamdan *.pyc
