@@ -120,3 +120,12 @@ app_license = "MIT"
 # 	"frappe.desk.doctype.event.event.get_events": "hamdan.event.get_events"
 # }
 
+fixtures = [
+    	{
+		"dt":"Custom Script",
+		"filters":[
+			["name", "in", ["Sales Invoice-Client"]],
+		]
+	}
+]
+

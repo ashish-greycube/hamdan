@@ -1,0 +1,11 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sales Invoice", 
+  "modified": "2018-07-26 12:15:04.669913", 
+  "name": "Sales Invoice-Client", 
+  "script": "frappe.ui.form.on('Sales Invoice', {\n    customer: function (frm) {\n        console.log(frm.doc.customer)\n        if (frm.doc.customer != null) {\n            frm.set_value('customer_optics', '')\n            cur_frm.fields_dict['customer_optics'].get_query = function (doc, cdt, cdn) {\n                console.log(doc.customer)\n                return {\n                    filters: {\n                        'customer': doc.customer,\n                        'docstatus': 0\n                    }\n                }\n            }\n        }\n    }\n})", 
+  "script_type": "Client"
+ }
+]
